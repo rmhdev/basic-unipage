@@ -1,0 +1,9 @@
+{
+  "name": "basic-unipage",
+  "version": "0.0.1",
+  "description": "Pet project",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.8.10"
+  }
+}
