@@ -1,6 +1,6 @@
 # Basic Unipage
 
-Pet project
+Pet project based on kogakure's [Gulp tutorial]
 
 ## Requirements
 
@@ -14,5 +14,6 @@ Pet project
 * [Gulp]
 
 
+[Gulp tutorial]: https://github.com/kogakure/gulp-tutorial
 [Jekyll]: http://jekyllrb.com
 [Gulp]: http://gulpjs.com
