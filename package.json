@@ -4,6 +4,7 @@
   "description": "Pet project",
   "private": true,
   "devDependencies": {
+    "del": "^1.1.1",
     "gulp": "^3.8.10",
     "require-dir": "^0.1.0"
   }
