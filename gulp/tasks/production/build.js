@@ -7,6 +7,8 @@ gulp.task('build:production', function(callback) {
         'jekyll:production',
         'sass',
         'optimize:css',
+        'revision',
+        'revision:collect',
         callback
     );
 });
