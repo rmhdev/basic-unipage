@@ -18,7 +18,7 @@ module.exports = {
         production: {
             src: src,
             destination: production,
-            config: src + '/_config.yml'
+            config: src + '/_config.yml,' + src + '/_config.production.yml'
         }
     },
     sass: {
