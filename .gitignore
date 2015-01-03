@@ -3,3 +3,4 @@ _site/
 .idea/
 node_modules/
 build/
+.DS_store
