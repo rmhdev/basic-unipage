@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var rev = require('gulp-rev');
-var config = require('../../config').revision;
+var config = require('../config').revision;
 
 gulp.task('revision', function() {
     return gulp.src(config.src.assets, { base: config.src.base })
@@ -13,7 +13,7 @@ gulp.task('revision', function() {
 
 
 var collect = require('gulp-rev-collector');
-var configCollect  = require('../../config').collect;
+var configCollect  = require('../config').collect;
 
 gulp.task('revision:collect', function() {
     return gulp.src(configCollect.src)

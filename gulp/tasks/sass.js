@@ -3,7 +3,7 @@ var plumber      = require('gulp-plumber');
 var sass         = require('gulp-ruby-sass');
 var gulpFilter   = require('gulp-filter');
 var sourceMaps   = require('gulp-sourcemaps');
-var config       = require('../../config');
+var config       = require('../config');
 
 /**
  * Generate CSS from SCSS

@@ -6,7 +6,7 @@ var production = 'build/production';
 var productionAssets = 'build/production/assets';
 
 module.exports = {
-    delete: {
+    initialize: {
         src: [developmentAssets]
     },
     jekyll: {

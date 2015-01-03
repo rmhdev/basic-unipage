@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var minifyCss = require('gulp-minify-css');
 var size = require('gulp-size');
-var configCss = require('../../config').optimize.css;
+var configCss = require('../config').optimize.css;
 
 gulp.task('optimize:css', function() {
     return gulp.src(configCss.source)
@@ -13,7 +13,7 @@ gulp.task('optimize:css', function() {
 
 
 var concat = require('gulp-concat');
-var configJs = require('../../config').optimize.js;
+var configJs = require('../config').optimize.js;
 
 gulp.task('optimize:js', function() {
     return gulp.src(configJs.source)
@@ -23,7 +23,7 @@ gulp.task('optimize:js', function() {
 
 
 var imageMin = require('gulp-imagemin');
-var configImage = require('../../config').optimize.images;
+var configImage = require('../config').optimize.images;
 
 gulp.task('optimize:images', function() {
     return gulp.src(configImage.source)

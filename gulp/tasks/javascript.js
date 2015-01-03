@@ -1,5 +1,5 @@
 var gulp         = require('gulp');
-var config       = require('../../config').javascript;
+var config       = require('../config').javascript;
 
 gulp.task('javascript', function() {
     return gulp.src(config.src, {})
