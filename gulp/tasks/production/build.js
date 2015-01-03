@@ -7,11 +7,13 @@ gulp.task('build:production', function(callback) {
         'jekyll:production',
         [
             'sass',
-            'javascript'
+            'javascript',
+            'images'
         ],
         [
             'optimize:css',
-            'optimize:js'
+            'optimize:js',
+            'optimize:images'
         ],
         'revision',
         'revision:collect',

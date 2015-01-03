@@ -20,3 +20,14 @@ gulp.task('optimize:js', function() {
         .pipe(concat(configJs.options.name))
         .pipe(gulp.dest(configJs.destination));
 });
+
+
+var imageMin = require('gulp-imagemin');
+var configImage = require('../../config').optimize.images;
+
+gulp.task('optimize:images', function() {
+    return gulp.src(configImage.source)
+        .pipe(imageMin(configImage.options))
+        .pipe(gulp.dest(configImage.destination))
+        .pipe(size());
+});

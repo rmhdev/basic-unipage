@@ -36,6 +36,11 @@ module.exports = {
         dest: developmentAssets + '/js',
         options: {}
     },
+    images: {
+        src:  srcAssets + '/images/**/*.{jpg,jpeg,png,gif}',
+        dest: developmentAssets + '/images',
+        options: {}
+    },
     optimize: {
         css: {
             source: developmentAssets + '/css/*.css',
@@ -50,13 +55,23 @@ module.exports = {
             options: {
                 name: "app.js"
             }
+        },
+        images: {
+            source: developmentAssets + '/images/*.{jpg,jpeg,png,gif}',
+            destination: productionAssets + '/images',
+            options: {
+                optimizationLevel: 3,
+                progressive: true,
+                interlaced: true
+            }
         }
     },
     revision: {
         src: {
             assets: [
                 productionAssets + '/css/*.css',
-                productionAssets + '/js/*.js'
+                productionAssets + '/js/*.js',
+                productionAssets + '/images/**/*.{jpg,jpeg,png,gif}'
             ],
             base: production
         },
