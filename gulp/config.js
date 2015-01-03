@@ -2,6 +2,8 @@ var development = 'build/development';
 var developmentAssets = 'build/assets';
 var src = 'app';
 var srcAssets = 'app/_assets';
+var production = 'build/production';
+var productionAssets = 'build/production/assets';
 
 module.exports = {
     delete: {
@@ -22,6 +24,15 @@ module.exports = {
             compass: false,
             bundleExec: true,
             sourcemapPath: '../../_assets/scss'
+        }
+    },
+    optimize: {
+        css: {
+            source: developmentAssets + '/css/*.css',
+            destination: productionAssets + '/css',
+            options: {
+                keepSpecialComments: 0
+            }
         }
     }
 };
