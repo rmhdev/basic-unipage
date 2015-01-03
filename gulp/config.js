@@ -32,7 +32,7 @@ module.exports = {
         }
     },
     javascript: {
-        src:  srcAssets + '/js/**/*.{js}',
+        src:  srcAssets + '/js/**/*.js',
         dest: developmentAssets + '/js',
         options: {}
     },
