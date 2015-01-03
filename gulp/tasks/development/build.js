@@ -6,7 +6,8 @@ gulp.task('build', function(callback) {
         'delete',
         [
             'jekyll',
-            'sass'
+            'sass',
+            'javascript'
         ],
         callback
     );

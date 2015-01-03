@@ -31,6 +31,11 @@ module.exports = {
             sourcemapPath: '../../_assets/scss'
         }
     },
+    javascript: {
+        src:  srcAssets + '/js/**/*.{js}',
+        dest: developmentAssets + '/js',
+        options: {}
+    },
     optimize: {
         css: {
             source: developmentAssets + '/css/*.css',
@@ -38,12 +43,20 @@ module.exports = {
             options: {
                 keepSpecialComments: 0
             }
+        },
+        js: {
+            source: developmentAssets + '/js/*.js',
+            destination: productionAssets + '/js',
+            options: {
+                name: "app.js"
+            }
         }
     },
     revision: {
         src: {
             assets: [
-                productionAssets + '/css/*.css'
+                productionAssets + '/css/*.css',
+                productionAssets + '/js/*.js'
             ],
             base: production
         },
