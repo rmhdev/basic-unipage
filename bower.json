@@ -1,0 +1,24 @@
+{
+  "name": "basic-unipage",
+  "version": "0.0.1",
+  "homepage": "https://github.com/rmhdev/basic-unipage",
+  "authors": [
+    "rober <rmh.dev@gmail.com>"
+  ],
+  "description": "Pet project",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1"
+  }
+}
