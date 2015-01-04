@@ -1,13 +1,15 @@
 var development = 'build/development';
-var developmentAssets = 'build/assets';
+var buildAssets = 'build/assets';
 var src = 'app';
 var srcAssets = 'app/_assets';
 var production = 'build/production';
 var productionAssets = 'build/production/assets';
+var developmentAssets = 'build/development/assets';
+var build = 'build';
 
 module.exports = {
     initialize: {
-        src: [developmentAssets]
+        src: [buildAssets]
     },
     jekyll: {
         development: {
@@ -23,7 +25,7 @@ module.exports = {
     },
     sass: {
         src:  srcAssets + '/scss/**/*.{sass,scss}',
-        dest: developmentAssets + '/css',
+        dest: buildAssets + '/css',
         options: {
             noCache: true,
             compass: false,
@@ -33,37 +35,42 @@ module.exports = {
     },
     javascript: {
         src:  srcAssets + '/js/**/*.js',
-        dest: developmentAssets + '/js',
+        dest: buildAssets + '/js',
         options: {}
     },
     images: {
         src:  srcAssets + '/images/**/*.{jpg,jpeg,png,gif}',
-        dest: developmentAssets + '/images',
+        dest: buildAssets + '/images',
         options: {}
     },
     optimize: {
         css: {
-            source: developmentAssets + '/css/*.css',
+            source: buildAssets + '/css/*.css',
             destination: productionAssets + '/css',
             options: {
                 keepSpecialComments: 0
             }
         },
         js: {
-            source: developmentAssets + '/js/*.js',
+            source: buildAssets + '/js/*.js',
             destination: productionAssets + '/js',
             options: {
                 name: "app.js"
             }
         },
         images: {
-            source: developmentAssets + '/images/*.{jpg,jpeg,png,gif}',
+            source: buildAssets + '/images/*.{jpg,jpeg,png,gif}',
             destination: productionAssets + '/images',
             options: {
                 optimizationLevel: 3,
                 progressive: true,
                 interlaced: true
             }
+        },
+        development: {
+            source: buildAssets + '/**/*.{css,js,jpg,jpeg,png,gif}',//
+            destination: developmentAssets,
+            options: {}
         }
     },
     revision: {
@@ -90,5 +97,22 @@ module.exports = {
             '!' + production + '/feed.xml'
         ],
         dest: production
+    },
+    watch: {
+        sass: srcAssets + '/scss/**/*.{scss,sass}',
+        javascript: srcAssets + '/js/**/*.js',
+        images: srcAssets + '/images/**/*.{jpeg,jpg,png,gif}',
+        jekyll: src + '/**/*.{html,markdown,md,yml,json,txt,xml}'
+    },
+    browserSync: {
+        server: {
+            baseDir: [development]
+        },
+        port: 9999,
+        files: [
+            buildAssets + '/css/*.css',
+            buildAssets + '/js/*.js',
+            buildAssets + '/images/**/*.{jpeg,jpg,png,gif}'
+        ]
     }
 };

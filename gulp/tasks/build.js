@@ -10,6 +10,7 @@ gulp.task('build', function(callback) {
             'javascript',
             'images'
         ],
+        'optimize:development',
         callback
     );
 });
