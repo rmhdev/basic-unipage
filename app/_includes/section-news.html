@@ -1,0 +1,16 @@
+<header>
+    <h1 class="page-heading">News</h1>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</header>
+
+<ul class="list-group">
+    {% for post in site.posts %}
+    <li class="list-group-item">
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
