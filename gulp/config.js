@@ -68,7 +68,7 @@ module.exports = {
             }
         },
         development: {
-            source: buildAssets + '/**/*.{css,js,jpg,jpeg,png,gif}',//
+            source: buildAssets + '/**/*.{css,map,js,jpg,jpeg,png,gif}',//
             destination: developmentAssets,
             options: {}
         }
@@ -76,7 +76,7 @@ module.exports = {
     revision: {
         src: {
             assets: [
-                productionAssets + '/css/*.css',
+                productionAssets + '/css/*.{css,map}',
                 productionAssets + '/js/*.js',
                 productionAssets + '/images/**/*.{jpg,jpeg,png,gif}'
             ],
@@ -102,15 +102,26 @@ module.exports = {
         sass: srcAssets + '/scss/**/*.{scss,sass}',
         javascript: srcAssets + '/js/**/*.js',
         images: srcAssets + '/images/**/*.{jpeg,jpg,png,gif}',
-        jekyll: src + '/**/*.{html,markdown,md,yml,json,txt,xml}'
+        jekyll: [
+            '_config.yml',
+            '_config.build.yml',
+            src + '/_data/**/*.{json,yml,csv}',
+            src + '/_includes/**/*.{html,xml}',
+            src + '/_layouts/*.html',
+            src + '/_locales/*.yml',
+            src + '/_plugins/*.rb',
+            src + '/_posts/*.{markdown,md}',
+            src + '/**/*.{html,markdown,md,yml,json,txt,xml}',
+            src + '/*'
+        ]
     },
     browserSync: {
         server: {
-            baseDir: [development]
+            baseDir: [development, build, src]
         },
         port: 9999,
         files: [
-            buildAssets + '/css/*.css',
+            buildAssets + '/css/*.{css,map}',
             buildAssets + '/js/*.js',
             buildAssets + '/images/**/*.{jpeg,jpg,png,gif}'
         ]

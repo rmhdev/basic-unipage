@@ -1,5 +1,6 @@
 var gulp        = require('gulp');
 var cp          = require('child_process');
+var browserSync = require('browser-sync');
 var config      = require('../config').jekyll;
 var buildJekyll;
 
@@ -25,4 +26,8 @@ gulp.task('jekyll', function(done) {
 
 gulp.task('jekyll:production', function(done) {
     return buildJekyll(cp, config.production, done);
+});
+
+gulp.task('jekyll:sync', ['jekyll'], function() {
+    browserSync.reload();
 });
