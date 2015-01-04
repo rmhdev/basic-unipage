@@ -1,11 +1,22 @@
-var gulp = require('gulp');
-var minifyCss = require('gulp-minify-css');
-var size = require('gulp-size');
-var configCss = require('../config').optimize.css;
+var gulp        = require('gulp');
+var minifyCss   = require('gulp-minify-css');
+var size        = require('gulp-size');
+var configCss   = require('../config').optimize.css;
+var header      = require('gulp-header');
+var pkg         = require('../../package.json');
+var banner      = [
+    '/**',
+    ' * <%= pkg.name %> - <%= pkg.description %>',
+    ' * @version v<%= pkg.version %>',
+    ' * @link <%= pkg.homepage %>',
+    ' * @license <%= pkg.license %>',
+    ' */',
+    ''].join('\n');
 
 gulp.task('optimize:css', function() {
     return gulp.src(configCss.source)
         .pipe(minifyCss(configCss.options))
+        .pipe(header(banner, { pkg : pkg } ))
         .pipe(gulp.dest(configCss.destination))
         .pipe(size())
     ;
@@ -18,6 +29,7 @@ var configJs = require('../config').optimize.js;
 gulp.task('optimize:js', function() {
     return gulp.src(configJs.source)
         .pipe(concat(configJs.options.name))
+        .pipe(header(banner, { pkg : pkg } ))
         .pipe(gulp.dest(configJs.destination));
 });
 
