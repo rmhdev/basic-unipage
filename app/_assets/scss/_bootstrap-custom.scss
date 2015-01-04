@@ -13,7 +13,7 @@
 //@import "bootstrap/code";
 @import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
 //@import "bootstrap/tables";
-//@import "bootstrap/forms";
+@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/forms";
 @import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/buttons";
 
 // Components
@@ -21,8 +21,8 @@
 //@import "bootstrap/dropdowns";
 //@import "bootstrap/button-groups";
 //@import "bootstrap/input-groups";
-//@import "bootstrap/navs";
-//@import "bootstrap/navbar";
+@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/navs";
+@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/navbar";
 //@import "bootstrap/breadcrumbs";
 //@import "bootstrap/pagination";
 //@import "bootstrap/pager";
@@ -46,5 +46,5 @@
 //@import "bootstrap/carousel";
 //
 //// Utility classes
-//@import "bootstrap/utilities";
+@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/utilities";
 //@import "bootstrap/responsive-utilities";
