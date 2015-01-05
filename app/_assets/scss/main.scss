@@ -68,6 +68,21 @@ header .navbar {
   margin: 30px 0 70px 0;
 }
 
+
+.section-news h2 {
+  font-size: ceil(($font-size-base * 1.25));
+  margin-top: 0;
+}
+
+.section-news .caption p {
+  margin-top: ($line-height-computed / 2);
+}
+
+.section-news .row-secondary img {
+
+}
+
+
 @media (max-width: $screen-md-max) { // 1199
 
 }
