@@ -47,10 +47,6 @@ header .contact-button {
   padding-top: ($line-height-computed) * 2;
 }
 
-.section-index {
-  padding-top: 0;
-}
-
 .section header > p {
   margin-bottom: $line-height-computed;
   font-size: floor(($font-size-base * 1.15));
@@ -63,6 +59,7 @@ header .contact-button {
 }
 
 .section-index {
+  padding-top: 0;
   background: #272c30 url("../images/index.jpg") no-repeat center top;
   height: 700px;
   padding-top: 190px;
