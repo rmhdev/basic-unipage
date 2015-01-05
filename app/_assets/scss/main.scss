@@ -1,9 +1,118 @@
 @charset "utf-8";
 
-// Our variables
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "bootstrap-custom",
   "base"
 ;
+
+// Our variables
+$screen-xs-min: 480px;
+$footer-background: #f1f2f4;
+$footer-color: #A4A5AD;
+
+// Our styles
+body {
+
+}
+
+footer {
+  background-color: $footer-background;
+  color: $footer-color;
+  padding: 60px 0;
+}
+
+footer a {
+  color: $footer-color;
+  text-decoration: underline;
+}
+
+footer ul {
+  margin: 0;
+}
+
+header .navbar {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";       /* IE 8 */
+  filter: alpha(opacity=95);  /* IE 5-7 */
+  -moz-opacity: 0.95;          /* Netscape */
+  -khtml-opacity: 0.95;        /* Safari 1.x */
+  opacity: 0.95;               /* Good browsers */
+}
+
+.section header > p {
+  margin-bottom: $line-height-computed;
+  font-size: floor(($font-size-base * 1.15));
+  font-weight: 300;
+  line-height: 1.4;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: ($font-size-base * 1.5);
+  }
+}
+
+.section-index {
+  background: #272c30 url("../images/index.jpg") no-repeat center top;
+  height: 700px;
+  padding-top: 190px;
+}
+.section-index header {
+  text-align: center;
+}
+.section-index header h1 {
+  font-size: $font-size-h1;
+  color: #ffffff;
+}
+.section-index header p {
+  font-size: $font-size-h3;
+  color: #cccccc;
+  margin: 30px 0 70px 0;
+}
+
+@media (max-width: $screen-md-max) { // 1199
+
+}
+
+@media (max-width: $screen-sm-max) { // 991
+  .section-index {
+
+  }
+}
+
+@media (max-width: $screen-xs-max) { // 767
+  .section-index {
+    height: 480px;
+    padding-top: 120px;
+  }
+  .section-index header h1 {
+    font-size: 2.5em;
+  }
+  .section-index header p {
+    font-size: 1.8em;
+    margin: 10px 0 20px 0;
+  }
+  footer li.first {
+    display: block;
+  }
+}
+
+@media (max-width: ($screen-xs-min - 1)) { // 479
+  .section-index {
+    height: 480px;
+    padding-top: 70px;
+  }
+  .section-index header h1 {
+    font-size: 2em;
+  }
+  .section-index header p {
+    font-size: 1.5em;
+    margin: 10px 0 20px 0;
+  }
+  .section-index li {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .section-index li a {
+    width: 100%;
+  }
+
+}
