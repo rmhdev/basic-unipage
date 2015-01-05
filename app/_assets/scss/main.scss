@@ -39,6 +39,10 @@ header .navbar {
   opacity: 0.95;               /* Good browsers */
 }
 
+header .contact-button {
+  margin-right: $line-height-computed;
+}
+
 .section header > p {
   margin-bottom: $line-height-computed;
   font-size: floor(($font-size-base * 1.15));
