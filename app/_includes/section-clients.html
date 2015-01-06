@@ -1,6 +1,15 @@
 <header>
     <h1>Clients</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </header>
 
+<div class="row">
+{% for client in site.data.clients %}
+    <div class="col-sm-2 col-xs-3">
+        <div class="thumbnail">
+            <img src="../_assets/images/clients/logo1.jpg" alt="Logo {{ client.name }}" title="{{ client.name }}"  />
+        </div>
+    </div>
+{% endfor %}
+</div>

@@ -44,7 +44,7 @@ header .contact-button {
 }
 
 .section {
-  padding-top: ($line-height-computed) * 2;
+  padding-top: ceil($line-height-computed * 2.8);
 }
 
 .section header > p {
@@ -74,6 +74,10 @@ header .contact-button {
   font-size: $font-size-h3;
   color: #cccccc;
   margin: 30px 0 70px 0;
+}
+
+.section header h1 {
+  margin-top: 0;
 }
 
 // news

@@ -1,6 +1,18 @@
 <header>
     <h1>Team</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </header>
 
+<div class="row">
+    {% for member in site.data.team %}
+    <div class="col-sm-3 col-xs-6">
+        <div class="thumbnail">
+            <img src="../_assets/images/team/{{ member.image }}" alt="Logo {{ member.name }}"  />
+            <div class="caption text-center">
+                <span>{{ member.name }}</span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
