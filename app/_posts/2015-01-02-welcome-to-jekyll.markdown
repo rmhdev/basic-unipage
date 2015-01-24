@@ -1,25 +1,31 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Vestibulum imperdiet adipiscing"
 date:   2015-01-02 18:33:12
-categories: jekyll update
+image:  piece1.jpg
+excerpt: Vestibulum imperdiet adipiscing arcu, quis aliquam dolor condimentum dapibus. Aliquam fermentum leo aliquet quam volutpat et molestie mauris mattis. Suspendisse semper consequat velit in suscipit.
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+This is just a sample post.
 
-Jekyll also offers powerful support for code snippets:
+Vestibulum imperdiet adipiscing arcu, quis aliquam dolor condimentum 
+dapibus. Aliquam fermentum leo aliquet quam volutpat et molestie mauris 
+mattis. Suspendisse semper consequat velit in suscipit. Praesent blandit, 
+mi id facilisis adipiscing, tortor tellus mollis quam, sed dignissim 
+sapien diam ac lectus. Nunc eget ornare quam. Vivamus sit amet tortor 
+dolor, non egestas ligula. Mauris nisi risus, semper nec blandit id, 
+suscipit eget dolor. Sed placerat odio at erat porttitor varius. 
+Phasellus ornare vestibulum dolor ac rhoncus. Mauris laoreet varius 
+est eu rhoncus. Curabitur facilisis mauris eu purus pharetra vitae 
+tincidunt nulla gravida. Duis sagittis, felis a luctus mattis, metus 
+sem tempus velit, sit amet blandit tellus nisi id augue.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+Proin feugiat libero ac lorem mollis fermentum. Cras et lacus sodales 
+nisl facilisis ornare. Sed dolor eros, pulvinar ac varius non, 
+bibendum eget odio. Nulla facilisi. Pellentesque et nisi a tellus 
+ullamcorper faucibus. Nullam sagittis tempor mi non mattis. Proin 
+ultricies, enim sit amet bibendum tristique, ligula ante feugiat 
+nunc, sit amet imperdiet tortor nisl et felis. Pellentesque et nisl 
+dui, non dictum libero. Vivamus tempor ante ac leo suscipit a sodales 
+ligula iaculis. Curabitur massa mi, semper sed bibendum eget, auctor 
+in nulla. Quisque at mi in ligula viverra suscipit sed vitae leo. 
