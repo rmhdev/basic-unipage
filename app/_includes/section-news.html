@@ -5,50 +5,21 @@
 </header>
 
 <div class="row row-primary">
+    {% for post in site.posts limit:3 %}
     <div class="col-sm-4 col-md-4">
         <div class="">
             <div class="caption">
-                <h2>Thumbnail label</h2>
+                <h2>{{ post.title }}</h2>
                 <div class="thumbnail">
-                <a href="#" class="">
-                    <img src="../_assets/images/news/piece1.jpg" alt="..." />
-                </a>
-                    </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-4 col-md-4">
-        <div class="">
-            <div class="caption">
-                <h2>Thumbnail label</h2>
-                <div class="thumbnail">
-                <a href="#" class="">
-                    <img src="../_assets/images/news/piece1.jpg" alt="..." />
-                </a>
+                    <a href="{{ post.url | prepend: site.baseurl }}" class="">
+                        <img src="../_assets/images/news/{{ post.image }}" alt="..." />
+                    </a>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                {{ post.excerpt }}
             </div>
         </div>
     </div>
-
-    <div class="col-sm-4 col-md-4">
-        <div class="">
-            <div class="caption">
-                <h2>Thumbnail label</h2>
-                <div class="thumbnail">
-                <a href="#" class="">
-                    <img src="../_assets/images/news/piece1.jpg" alt="..." />
-                </a>
-                    </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 <div class="row row-secondary">
