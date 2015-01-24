@@ -45,7 +45,7 @@ header .contact-button {
 }
 
 .section {
-  padding-top: ceil($line-height-computed * 2.8);
+  padding-top: ceil($line-height-computed * 3.2);
 }
 .section header > p {
   margin-bottom: $line-height-computed;
@@ -100,7 +100,9 @@ header .contact-button {
 }
 
 // what
-
+.section-what {
+  background: transparent url("../images/index.jpg") no-repeat center top;
+}
 
 // news
 .section-news h2 {
@@ -109,8 +111,12 @@ header .contact-button {
 .section-news .row-primary h2 {
   margin-top: 0;
 }
+.section-news .row-primary .thumbnail {
+  margin-bottom: 0;
+}
 .section-news .caption p {
   margin-top: ($line-height-computed / 2);
+  padding-bottom: ($line-height-computed / 2);
 }
 .section-news .row-secondary img {
 
