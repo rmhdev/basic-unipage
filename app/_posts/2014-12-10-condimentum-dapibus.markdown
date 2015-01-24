@@ -1,12 +1,10 @@
 ---
 layout: post
-title:  "Vestibulum imperdiet adipiscing"
-date:   2015-01-02 18:33:12
+title:  "Condimentum dapibus aliquam fermentum leo aliquet quam"
+date:   2014-12-10 18:00:00
 image:  piece1.jpg
 excerpt: Vestibulum imperdiet adipiscing arcu, quis aliquam dolor condimentum dapibus. Aliquam fermentum leo aliquet quam volutpat et molestie mauris mattis. Suspendisse semper consequat velit in suscipit.
 ---
-
-This is just a sample post.
 
 Vestibulum imperdiet adipiscing arcu, quis aliquam dolor condimentum 
 dapibus. Aliquam fermentum leo aliquet quam volutpat et molestie mauris 
