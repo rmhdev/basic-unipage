@@ -9,13 +9,14 @@
     <div class="col-sm-4 col-md-4">
         <div class="">
             <div class="caption">
-                <h2>{{ post.title }}</h2>
+
                 <div class="thumbnail">
                     <a href="{{ post.url | prepend: site.baseurl }}" class="">
                         <img src="../_assets/images/news/{{ post.image }}" alt="..." />
                     </a>
                 </div>
-                {{ post.excerpt }}
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.excerpt }}</p>
             </div>
         </div>
     </div>
@@ -23,55 +24,31 @@
 </div>
 
 <div class="row row-secondary">
+    {% for post in site.posts limit:4 offset: 3 %}
     <div class="col-sm-6 col-md-6">
         <div class="">
             <div class="media">
-                <a class="media-left" href="#">
+                <a class="media-left" href="{{ post.url | prepend: site.baseurl }}">
                     <div class="thumbnail">
-                    <img src="../_assets/images/siberian-tiger.jpg" alt="..." />
+                        <img src="../_assets/images/news/{{ post.image }}" alt="..." />
                     </div>
                 </a>
                 <div class="media-body">
-                    <h2 class="media-heading">Middle aligned media</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h2 class="media-heading">{{ post.title }}</h2>
+                    <p>{{ post.excerpt }}</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-6 col-md-6">
-        <div class="thumbnail">
-            <div class="media">
-                <a class="media-left" href="#">
-                    <img src="../_assets/images/siberian-tiger.jpg" alt="..." />
-                </a>
-                <div class="media-body">
-                    <h2 class="media-heading">Middle aligned media</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 <div class="row-rest">
     <div class="list-group">
-        <a href="#" class="list-group-item">Cras justo odio</a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
+        {% for post in site.posts offset: 7 %}
+        <a href="{{ post.url | prepend: site.baseurl }}" class="list-group-item">{{ post.title }}</a>
+        {% endfor %}
     </div>
 </div>
-
-<ul class="list-group">
-    {% for post in site.posts %}
-    <li class="list-group-item">
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
-</ul>
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

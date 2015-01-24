@@ -109,7 +109,7 @@ header .contact-button {
   font-size: ceil(($font-size-base * 1.25));
 }
 .section-news .row-primary h2 {
-  margin-top: 0;
+  margin-top: ceil($line-height-computed / 2);
 }
 .section-news .row-primary .thumbnail {
   margin-bottom: 0;
